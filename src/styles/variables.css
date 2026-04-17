@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+:root {
+  /* Default Colors (Unified Pale Yellow Theme) */
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-color: #F2F87E;
+  --accent-hover: #e0e86a;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(242, 248, 126, 0.1);
+
+  /* Fonts */
+  --font-inter: 'Inter', sans-serif;
+  --font-home-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-project-body: 'DM Sans', sans-serif;
+  --font-about-heading: 'Lexend', sans-serif;
+  --font-main: var(--font-inter);
+  --font-heading: var(--font-home-heading);
+
+  /* Spacing & Typography (Fibonacci Scale) */
+  --f-8: 8px;
+  --f-13: 13px;
+  --f-21: 21px;
+  --f-34: 34px;
+  --f-55: 55px;
+  --f-89: 89px;
+
+  --section-padding: var(--f-89) var(--f-21);
+  --container-width: 1200px;
+}
+
+/* Classical Japanese Theme (Washi/Sumi) */
+[data-theme='sakura'] {
+  --bg-color: #fcfaf2;
+  /* Cream Washi Paper */
+  --text-color: #2b2b2b;
+  /* Sumi Ink Black */
+  --text-secondary: #595048;
+  /* Muted Ink Brown */
+  --accent-color: #c84b4b;
+  /* Vermilion / Torii Red */
+  --accent-hover: #a63737;
+  /* Darker Red */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  /* Frosted Glass */
+  --glass-border: rgba(43, 43, 43, 0.1);
+  /* Subtle Ink Border */
+
+  --font-main: 'Noto Serif JP', serif;
+  --font-heading: 'Noto Serif JP', serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: 
+    linear-gradient(rgba(242, 248, 126, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 248, 126, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  color: var(--text-color);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}

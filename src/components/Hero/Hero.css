@@ -1,0 +1,206 @@
+/* Hero.css */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-color);
+    padding-top: var(--f-89);
+}
+
+.hero-neural-flow .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    z-index: 10;
+}
+
+/* LEFT COLUMN - Neural Graph */
+.hero-visual {
+    position: relative;
+    width: 100%;
+}
+
+/* RIGHT COLUMN - Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: var(--font-home-heading);
+    font-size: min(4rem, 8vw);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+}
+
+.highlight-text {
+    color: var(--accent-color);
+}
+
+.hero-subtitle {
+    font-family: var(--font-inter);
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 95%;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.cta-btn {
+    font-family: var(--font-home-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.solid-yellow {
+    background-color: var(--accent-color);
+    color: #1a1a1a;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.solid-yellow:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(242, 248, 126, 0.2);
+}
+
+.text-arrow {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.text-arrow .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.text-arrow:hover .arrow {
+    transform: translateY(-3px) translateX(3px);
+    color: var(--accent-color);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.stat-item p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    font-family: var(--font-inter);
+}
+
+/* INTEGRATED SERVICES GRID */
+.hero-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+}
+
+.mini-service {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.mini-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.mini-text h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mini-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .hero-neural-flow .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-visual {
+        order: 1;
+    }
+
+    .hero-content {
+        order: 2;
+        align-items: center;
+    }
+
+    .hero-actions, .hero-stats {
+        justify-content: center;
+    }
+
+    .mini-service {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cta-btn {
+        width: 100%;
+    }
+}

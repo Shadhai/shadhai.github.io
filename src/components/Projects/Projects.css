@@ -1,0 +1,17 @@
+.projects-section {
+    padding: var(--section-padding);
+}
+
+.projects-grid {
+    display: grid;
+    /* Reduced min-width to 150px to allow 2 columns on screens > ~340px */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}

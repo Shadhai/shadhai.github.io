@@ -1,0 +1,97 @@
+.resume-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.resume-header {
+    margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.download-btn-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.download-btn-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.resume-preview {
+    background: var(--bg-card);
+    /* Assuming bg-card exists, fallback to previous or dark */
+    background: rgba(255, 255, 255, 0.05);
+    /* Keep fallback */
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    /* Slightly wider */
+    height: 80vh;
+    /* Responsive height */
+    min-height: 500px;
+    margin: 0 auto 3rem auto;
+    overflow: hidden;
+    /* Ensure iframe corners are clipped */
+}
+
+.pdf-placeholder {
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.pdf-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.hire-me-section {
+    padding: 4rem 2rem;
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 20px;
+}
+
+.hire-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 3rem;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.hire-btn:hover {
+    background: var(--accent-color);
+    color: white;
+}
