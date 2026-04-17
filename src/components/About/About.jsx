@@ -23,7 +23,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-image">
-                    <img src="/newer.png" alt="Developer" />
+                    <img src={import.meta.env.BASE_URL + "newer.png"} alt="Developer" />
                 </div>
             </div>
         </section>

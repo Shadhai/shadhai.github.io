@@ -53,7 +53,7 @@ export const projectsData = [
         "problemSolving": "GAN training instability was addressed through techniques like improved loss functions, normalization strategies, and architectural tuning. Experiments included conditional generation, self-attention mechanisms, and stabilization methods to reduce mode collapse and improve output diversity.",
         "presentation": "Each GAN variant is organized as a separate module with visual output comparisons, enabling clear analysis of how architectural changes affect generated image quality.",
         "polish": "Optimizations such as spectral normalization, label conditioning, and attention layers significantly improved convergence stability and image realism.",
-        "image": "/GAN.png",
+        "image": "/Gan.png",
         "archImage": "",
         "github": "https://github.com/Shadhai/GAN-Generative-Adversarial-Network-.git"
     }

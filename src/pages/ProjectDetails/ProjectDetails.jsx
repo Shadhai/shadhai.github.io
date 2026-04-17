@@ -42,49 +42,52 @@ const ProjectDetails = () => {
                         animate="visible"
                         variants={containerVariants}
                     >
-                        <motion.h1 className="project-title" variants={itemVariants}>
-                            {project.title}
-                        </motion.h1>
-
-                        <motion.div className="case-study-section" variants={itemVariants}>
-                            <h2 className="section-label">Case Study Overview</h2>
-                            <div className="card-context">{project.context}</div>
-                        </motion.div>
-                        
-                        <motion.div className="narrative-section" variants={itemVariants}>
-                            <div className="card-narrative">
-                                <p><strong>The Pitch</strong> {project.pitch}</p>
-                                <p><strong>Problem Solving</strong> {project.problemSolving}</p>
-                                <p><strong>Presentation</strong> {project.presentation}</p>
-                                <p><strong>Polish & Optimization</strong> {project.polish}</p>
+                        <motion.div className="details-hero" variants={itemVariants}>
+                            <h1 className="project-title">{project.title}</h1>
+                            <div className="hero-image-wrapper">
+                                <img src={project.image.startsWith('http') ? project.image : import.meta.env.BASE_URL + project.image} alt={project.title} />
                             </div>
                         </motion.div>
-                        
-                        <motion.div className="tech-stack-section" variants={itemVariants}>
-                            <h3>Engineered With</h3>
-                            <div className="tags">
-                                {project.tech.map(t => <span key={t} className="tech-tag">{t}</span>)}
-                            </div>
-                            
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-detail-btn">
-                                <FaGithub /> VIEW REPOSITORY
-                            </a>
-                        </motion.div>
 
-                        <motion.div className="arch-logic-section" variants={itemVariants}>
-                            <h3>Technical Logic</h3>
-                            <div className="schema-placeholder">
-                                <code>
+                        <div className="details-content">
+                            <motion.div className="main-info" variants={itemVariants}>
+                                <h2 className="section-title">Case Study Overview</h2>
+                                <div className="card-context">{project.context}</div>
+                                
+                                <div className="card-narrative">
+                                    <p><strong>The Pitch</strong> {project.pitch}</p>
+                                    <p><strong>Problem Solving</strong> {project.problemSolving}</p>
+                                    <p><strong>Presentation</strong> {project.presentation}</p>
+                                    <p><strong>Polish & Optimization</strong> {project.polish}</p>
+                                </div>
+                                
+                                <motion.div className="tech-stack-section" variants={itemVariants}>
+                                    <h3>Engineered With</h3>
+                                    <div className="tags">
+                                        {project.tech.map(t => <span key={t} className="tech-tag">{t}</span>)}
+                                    </div>
                                     
-                                    // System Schema Preview<br/>
-                                    const {project.title.replace(/\s/g, '')}Config = &#123;<br />
-                                    &nbsp;&nbsp;id: "{project.id}",<br />
-                                    &nbsp;&nbsp;architecture: "Decoupled Layers",<br />
-                                    &nbsp;&nbsp;primary_stack: [{project.tech.slice(0, 3).join(', ')}]<br />
-                                    &#125;
-                                </code>
-                            </div>
-                        </motion.div>
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-detail-btn">
+                                        <FaGithub /> VIEW REPOSITORY
+                                    </a>
+                                </motion.div>
+
+                                <motion.div className="arch-logic-section" variants={itemVariants}>
+                                    <h3>Technical Logic</h3>
+                                    <div className="schema-placeholder">
+                                        <code>
+                                            
+                                            // System Schema Preview<br/>
+                                            const {project.title.replace(/\s/g, '')}Config = &#123;<br />
+                                            &nbsp;&nbsp;id: "{project.id}",<br />
+                                            &nbsp;&nbsp;architecture: "Decoupled Layers",<br />
+                                            &nbsp;&nbsp;primary_stack: [{project.tech.slice(0, 3).join(', ')}]<br />
+                                            &#125;
+                                        </code>
+                                    </div>
+                                </motion.div>
+                            </motion.div>
+                        </div>
                     </motion.div>
 
                     {/* RIGHT PANEL: STICKY ARCHITECTURE IMAGE */}
@@ -94,7 +97,7 @@ const ProjectDetails = () => {
                             <div className="arch-image-wrapper">
                                 {project.archImage ? (
                                     <img 
-                                        src={project.archImage} 
+                                        src={import.meta.env.BASE_URL + project.archImage} 
                                         alt={`${project.title} Architecture`} 
                                         onError={(e) => {
                                             e.target.style.display = 'none';

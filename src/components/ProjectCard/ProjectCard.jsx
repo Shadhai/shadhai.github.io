@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
         <div className="project-card">
             <Link to={`/project/${project.id}`} className="card-image-link">
                 <div className="card-image-container">
-                    <img src={project.image} alt={project.title} className="card-image" />
+                    <img src={project.image.startsWith('http') ? project.image : import.meta.env.BASE_URL + project.image} alt={project.title} className="card-image" />
                     <div className="card-overlay">
                         <span>View Details</span>
                     </div>
